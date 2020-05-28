@@ -8,7 +8,6 @@ from .models import Truck
 class TruckAdmin(admin.ModelAdmin):
     list_display = (
         'location',
-        'endpoint',
         'status',
         'remaining_volume',
         'arrival_date',
@@ -19,7 +18,13 @@ class TruckAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('location', 'endpoint', 'status', 'remaining_volume', 'arrival_date', 'departure_date',)
+                'fields': 
+                (
+                    'location', 
+                    'status', 
+                    'remaining_volume', 
+                    'arrival_date', 
+                    'departure_date',)
             }
         ),
     )

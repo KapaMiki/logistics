@@ -20,15 +20,6 @@ class Truck(models.Model):
         verbose_name='Местоположение',
         related_name='trucks'
     )
-    endpoint = models.ForeignKey(
-        City,
-        on_delete=models.PROTECT,
-        null=True,
-        blank=True,
-        default=None,
-        related_name='arrive_trucks',
-        verbose_name='Конечная точка'
-    )
     status = models.IntegerField(
         choices=STATUS,
         default=0,
@@ -50,7 +41,7 @@ class Truck(models.Model):
     )
 
     def __str__(self):
-        return f'ID грузавика: {self.id}. Местоположение: {self.location.name}. Путь до: {self.endpoint}'
+        return f'ID грузавика: {self.id}. Местоположение: {self.location.name}.'
 
     def clean(self):
         if 84.5 < self.remaining_volume:
