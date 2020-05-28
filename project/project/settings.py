@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     #apps
     'apps.locations',
     'apps.orders',
-    'apps.properties'
+    'apps.properties',
+    'apps.trucks'
 ]
 
 MIDDLEWARE = [

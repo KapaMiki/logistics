@@ -6,7 +6,8 @@ from django.db import models
 class City(models.Model):
     name = models.CharField(
         max_length=50,
-        verbose_name='Название'
+        verbose_name='Название',
+        unique=True
     )
 
     def __str__(self):
@@ -27,7 +28,7 @@ class Distance(models.Model):
     )
 
     def __str__(self):
-        return f'Расстояние между {self.cities}'
+        return f'Расстояние между {self.cities.first()} - {self.cities.last()}'
 
     class Meta:
         verbose_name = 'Расстояние'
