@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}">
+   <script src="{% static 'js/uikit.min.js' %}"></script>
+   <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+   <title>Logistics</title>
+</head>
+
+<body>
+   <nav class="navigation">
+      <div class="nav-wrapper">
+         <ul class="nav-menu flex j-center">
+            <li class="nav-menu__item nav-menu__item-active">
+               <a href="{% url 'index_url' %}">
+                  Главная
+               </a>
+            </li>
+
+            <li class="nav-menu__item">
+               <a href="{% url 'about_url' %}">
+                  О компании
+               </a>
+            </li>
+
+            <li class="nav-menu__item">
+               <a href="{% url 'services_url' %}">
+                  Услуги
+               </a>
+            </li>
+
+            <li class="nav-menu__item">
+               <a href="{% url 'packing_url' %}">
+                  Упаковка
+               </a>
+            </li>
+
+            <li class="nav-menu__item">
+               <a href="{% url 'order_status_url' %}">
+                  Статус заказа
+               </a>
+            </li>
+
+            <li class="nav-menu__item">
+               <a href="{% url 'order_url' %}">
+                  Заказать доставку груза
+               </a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+
+
+   {% block content %}
+   {% endblock %}
+   
+
+   <footer>
+      <div class="wrapper">
+         <div class="pre-wrap">
+            <div class="footer-menu flex j-sb">
+               <div class="footer-menu__item">
+                  <div class="footer-menu__item-s">
+                     <p class="footer-menu-item__title">
+                        Головной офис
+                     </p>
+
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           <img src="/media/img/point.png" width="17" height="21">
+                        </p>
+                        <p>
+                           г. Алматы <br>
+                           Dostyk Plaza
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="footer-menu__item-s">
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           <img src="/media/img/tablet.png" width="17" height="21">
+                        </p>
+                        <p>
+                           Отдел логистики: <br>
+                           +7 (707) 777 7887
+                           +7 (775) 777 7887
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="footer-menu__item-s">
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           <img src="/media/img/tablet.png" width="17" height="21">
+                        </p>
+                        <p>
+                           Отдел продаж: <br>
+                           +7 (707) 700 7887
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="footer-menu__item">
+                  <div class="footer-menu__item-s">
+                     <p class="footer-menu-item__title">
+                        УСЛУГИ
+                     </p>
+
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           Доставка грузов
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="footer-menu__item-s">
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           Снабжение
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="footer-menu__item">
+                  <div class="footer-menu__item-s">
+                     <p class="footer-menu-item__title">
+                        Контакты
+                     </p>
+
+                     <div class="footer-menu-item__desc flex">
+                        <p>
+                           <img src="/media/img/point.png" width="17" height="21">
+                        </p>
+                        <p>
+                           г. Алматы <br>
+                           Dostyk Plaza
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer-socials">
+               Мы в соц. сетях:
+
+               <a href="#" arget="_blank">
+                  <img src="/media/img/facebook.png" width="40" height="40">
+               </a>
+               <a href="" target="_blank">
+                  <img src="/media/img/instagram-v051916_200.png" width="42" height="42">
+               </a>
+            </div>
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>

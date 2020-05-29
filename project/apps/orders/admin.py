@@ -24,7 +24,8 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = (
         'truck',
-        'price'
+        'price',
+        'status'
     )
 
 

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+   <header class="secondary-header">
+      <h1>Статус заказа</h1>
+   </header>
+
+   <section class="order-status-section">
+      <div class="wrapper">
+         <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+               <span uk-search-icon></span>
+               <input class="uk-search-input order-status-search" type="search" placeholder="Введите чек">
+            </form>
+         </div>
+
+         <table class="uk-table uk-table-divider">
+            <thead>
+               <tr>
+                  <th>Table Heading</th>
+                  <th>Table Heading</th>
+                  <th>Table Heading</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+               </tr>
+               <tr>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+               </tr>
+               <tr>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+                  <td>Table Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </section>
+{% endblock %}

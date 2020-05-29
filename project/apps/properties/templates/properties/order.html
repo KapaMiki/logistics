@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+
+   <header class="secondary-header" style="background: transparent url('/media/img/company.jpg') no-repeat center center;">
+      <h1>Заказать доставку груза</h1>
+   </header>
+
+   <section class="calculate-section">
+      <div class="wrapper">
+         <form method="POST">
+         {% csrf_token %}
+            <div class="calculate-form">
+               <div class="calculate-form-group">
+                  <div class="calculate-form-group-field">
+                     <label for="phone">Телефон</label>
+                     <input id="phone" type="text" placeholder="87087987443" name="phone">
+                  </div>
+
+                  <div class="calculate-form-group-field">
+                     <label for="email">Email</label>
+                     <input id="email" type="text" placeholder="example@email.com" name="email">
+                  </div>
+               </div>
+
+               <div class="calculate-form-group">
+                  <div class="calculate-form-group-field">
+                     <label for="city-A">Точка отправление</label>
+                     <select id="city-A" type="text" name="city_a">
+                        {% for city in cities %}
+                              <option value="{{ city.id }}">{{ city.name }}</option>
+                        {% endfor  %}
+                     </select>
+                  </div>
+
+                  <div class="calculate-form-group-field">
+                     <label for="address-A">Адрес</label>
+                     <input id="address-A" type="text" placeholder="Карменова 51а">
+                  </div>
+               </div>
+
+               <div class="calculate-form-group">
+                  <div class="calculate-form-group-field">
+                     <label for="city-B">Останова</label>
+                     <select id="city-B" type="text" name="city_b">
+                        {% for city in cities %}
+                            <option value="{{ city.id }}">{{ city.name }}</option>
+                        {% endfor  %}
+                     </select>
+                  </div>
+
+                  <div class="calculate-form-group-field">
+                     <label for="address-B">Адрес</label>
+                     <input id="address-B" type="text" placeholder="Карменова 51а">
+                  </div>
+               </div>
+
+               <div class="calculate-form-group">
+                  <h4>Товары</h4>
+
+                  <button class="calculate-form-group-button" type="button">
+                     Добавить поле товара
+                  </button>
+               </div>
+
+               <div class="products-group">
+                  <div class="products-group-item">
+                     <div class="product-group-name">
+                        <div class="product-group-name-header">
+                           <label>Название</label>
+                        </div>
+                        <input type="text" name="name">
+                     </div>
+
+                     <div class="product-group-properties">
+                        <div class="product-group-properties__item">
+                           <label>Вес</label>
+                           <input type="text" name="weight">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Длина</label>
+                           <input type="text" name="length">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Ширина</label>
+                           <input type="text" name="width">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Высота</label>
+                           <input type="text" name="height">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <p class="form-result-test">
+                  Скопируйте номер чека <span>123124843123</span>
+               </p>
+
+               <button class="form-button">
+                  Подтвердить
+               </button>
+            </div>
+         </form>
+      </div>
+   </section>
+{% endblock %}

@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+{% block content %}
+   <header class="main-header">
+      <div class="header-section-bring" style="background: url('/media/img/bg1.jpg');">
+         <div class="wrapper">
+            <p class="header-section__badge">
+               Доставка Грузов
+            </p>
+
+            <h1 class="header-section__title">
+               Привезём
+            </h1>
+
+            <p class="header-section__desc">
+               Если вы сами напрямую оплатите товар, мы осуществим комплексную доставку груза
+            </p>
+
+            <div class="header-section__action flex j-center">
+               <a href="{% url 'calculation_url' %}" class="header-section-action__item-outlined flex fa-center">
+                  <p>
+                     <img src="/media/img/calculate.png" alt="Calc">
+                  </p>
+                  <p>
+                     Бесплатный <br> экспресс-расчёт стоимости
+                  </p>
+               </a>
+
+               <a href="{% url 'order_url' %}" class="header-section-action__item">
+                  <img src="/media/img/online.png" alt="">
+                  Заказать Доставку груза
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <div class="header-section-buy" style="background: url('/media/img/bg2.jpg');">
+         <div class="wrapper">
+            <p class="header-section__badge">
+               Аутсорсинг ВЭД
+            </p>
+
+            <h1 class="header-section__title">
+               Купим + Привезём
+            </h1>
+
+            <p class="header-section__desc">
+               Экономьте от 7%, покупая товар в России через нашу компанию, за счет отсутствия двойного налогообложения
+            </p>
+
+            <div class="header-section__action flex j-center">
+               <a href="{% url 'order_url' %}" class="header-section-action__item">
+                  <img src="/media/img/online.png" alt="">
+                  Заказать Доставку груза
+               </a>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <section class="about-section">
+      <div class="wrapper">
+         <h1 class="about-title">Мы в цифрах</h1>
+
+         <div class="about-list flex j-center flex-wrap">
+            <div class="about-list__item">
+               <p class="about-list-item__title">> 500</p>
+               <p class="about-list-item__desc">автомобилей в нашем автопарке</p>
+            </div>
+            <div class="about-list__item about-list__item-bg about-list__item-bg-1">
+
+            </div>
+            <div class="about-list__item">
+               <p class="about-list-item__title">>12 лет</p>
+               <p class="about-list-item__desc">опыта на рынке грузоперевозок</p>
+            </div>
+            <div class="about-list__item about-list__item-bg about-list__item-bg-2">
+
+            </div>
+            <div class="about-list__item about-list__item-bg about-list__item-bg-3">
+
+            </div>
+            <div class="about-list__item">
+               <p class="about-list-item__title">30 мин</p>
+               <p class="about-list-item__desc">от заявки до подачи автотранспорта</p>
+            </div>
+
+            <div class="about-list__item about-list__item-bg about-list__item-bg-4">
+
+            </div>
+            <div class="about-list__item">
+               <p class="about-list-item__title">50 000 000</p>
+               <p class="about-list-item__desc">тенге застрахованная ответственность</p>
+            </div>
+            <div class="about-list__item">
+               <p class="about-list-item__title">> 1000</p>
+               <p class="about-list-item__desc">довольных клиентов за прошедший 2019 год</p>
+            </div>
+            <div class="about-list__item about-list__item-bg about-list__item-bg-5">
+
+            </div>
+            <div class="about-list__item">
+               <p class="about-list-item__title">> 10 580</p>
+               <p class="about-list-item__desc">доставок по всему миру</p>
+            </div>
+            <div class="about-list__item about-list__item-bg about-list__item-bg-6">
+
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="problems-section">
+      <div class="wrapper">
+         <h1 class="problems-title landing-title">
+            <span>Проблемы</span>, с которыми вы можете столкнуться при работе с перевозчиком
+         </h1>
+
+         <div class="landing-list">
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/dream.svg" class="t491__img t-img loading" imgfield="li_img__1476976310929"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Поступают безответственно
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Сервис падает с момента получения оплаты. Всем вдруг становится всё равно на Ваш груз.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/event.svg" class="t491__img t-img loading" imgfield="li_img__1476976315081"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Не выдерживают сроки
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Стараются загрузить больше грузов, заработать сверх того, что Вы заплатили. В следствии чего машина
+                  выезжает позже или останавливается по дороге.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/paper.svg" class="t491__img t-img loading" imgfield="li_img__1476976330452"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Нет документов
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Из-за отсутствия документов, нет никаких гарантий в сохранности груза
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/libra.svg" class="t491__img t-img loading" imgfield="li_img__1476976334035"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Вы переплачиваете
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  95% перевозчиков на рынке это посредники, поэтому вы платите двойную цену (посредникам и собственникам
+                  авто)
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/libra.svg" class="t491__img t-img loading" imgfield="li_img__1476976334035"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Груз испорчен
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  При перевозке груз может быть испорчен. Никто не несет ответственности. Так как с Вами работала
+                  фирма-однодневка
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/shipped_1.svg" class="t491__img t-img loading" imgfield="li_img__1476976692541"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Вы не знаете, где груз
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  До водителя не дозвонишься. И сам он не отзвонится. А у нас Вы получаете ежедневно SMS с конкретным
+                  местонахождением груза
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="advantages-section">
+      <div class="wrapper">
+         <h1 class="advantages-title landing-title">
+            Почему клиенты <span>работают с нами и рекомендуют</span> своим партнерам
+         </h1>
+
+         <div class="landing-list">
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/watch.svg" class="t491__img t-img loading" imgfield="li_img__1476976310929"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Скорая подача транспорта
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Подача транспорта в течении 30 минут с момента заявки.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/speak.svg" class="t491__img t-img loading" imgfield="li_img__1476976315081"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Информирование о грузе
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Информирование о местонахождении груза 24 часа в сутки 7 дней в неделю и ежедневное SMS-информирование
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/steering-wheel.svg" class="t491__img t-img loading" imgfield="li_img__1476976330452"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Нет остановок на маршруте
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  2 водителя экспедитора сменяя друг друга перевозят груз гораздо быстрее.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/save-money.svg" class="t491__img t-img loading" imgfield="li_img__1476976334035"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Низкие цены
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Собственный автопарк, водители работают на основании Трудового Договора. На постоянной основе, а не на
+                  сдельной.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/smile.svg" class="t491__img t-img loading" imgfield="li_img__1476976688514"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Сохранность груза
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Несем материальную ответственность на основе договора. Мы застрахованы от утери, порчи, сгорания,
+                  утопания и т.д.
+               </p>
+            </div>
+
+            <div class="landing-list__item">
+               <div class="landing-list-item__container">
+                  <img src="/media/img/truck.svg" class="t491__img t-img loading" imgfield="li_img__1476976692541"
+                     style="width:50px;">
+
+                  <p class="landing-list-item-container__title">
+                     Разные типы <br> и грузоподъемности авто
+                  </p>
+               </div>
+
+               <p class="landing-list-item__desc">
+                  Грузовики 1,5 тонн, 5, 10, 15 и 20 тон. Рефрижераторы, тенты, термосы, автовозы, тралы, контейнеровозы
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+{% endblock %}
+   

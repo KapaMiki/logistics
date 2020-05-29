@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 
 STATUS = [
     (0, ('В ожидании загрузки')),
-    (1, ('В ожидании заполнения')),
+    (1, ('Заполняется')),
     (3, ('В пути')),
 ]
 

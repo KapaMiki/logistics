@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+   <header class="secondary-header">
+      <h1>Услуги</h1>
+
+      <p>Привезём Ваш груз до двери</p>
+   </header>
+
+   <section class="about-banner">
+      <div class="wrapper">
+         <div class="flex j-se">
+            <div class="about-banner-item flex fa-center j-center">
+               <p>12</p>
+               <p>ЛЕТ <br> ОПЫТА</p>
+            </div>
+
+            <div class="about-banner-item flex fa-center j-center">
+               <img alt="" width="52" height="52" src="/media/img/box_white.png">
+               <p>СВОИ СКЛАДЫ <br> И АВТОПАРКИ</p>
+            </div>
+
+            <div class="about-banner-item flex fa-center j-center">
+               <p>29</p>
+               <p>ПРЕДСТАВИТЕЛЬСТВ <br> ПО СНГ</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="service-section">
+      <div class="wrapper">
+         <div class="service-box">
+            <div class="service-list flex j-sb flex-wrap">
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_01.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     Полный пакет <br> документов
+                  </p>
+               </div>
+
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_02.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     Проверенная база <br> поставщиков из РФ
+                  </p>
+               </div>
+
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_03.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     Страхование <br> груза
+                  </p>
+               </div>
+
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_04.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     От 1 кг до &#8734;
+                  </p>
+               </div>
+
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_05.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     Личный менеджер <br> каждому клиенту
+                  </p>
+               </div>
+
+               <div class="service-list__item">
+                  <div class="service-list-item__img">
+                     <img alt="" width="75" height="75" src="/media/img/icon_06.jpg">
+                  </div>
+
+                  <p class="service-list-item__desc">
+                     Доставка <br> от двери до двери
+                  </p>
+               </div>
+            </div>
+
+            <a class="service-button" href="{% url 'index_url' %}" target="_blank">
+               Подробнее на нашем сайте
+            </a>
+         </div>
+
+         <h1 class="service-delivery-title">Доставим Ваш груз</h1>
+
+         <div class="service-delivery-car">
+
+         </div>
+      </div>
+   </section>
+{% endblock %}
+

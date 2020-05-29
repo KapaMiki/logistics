@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+   <header class="secondary-header">
+      <h1>Бесплатный экспресс-расчёт стоимости</h1>
+   </header>
+
+   <section class="calculate-section">
+      <div class="wrapper">
+         <form method="POST">
+         {% csrf_token %}
+            <div class="calculate-form">
+               <div class="calculate-form-group">
+                  <div class="calculate-form-group-field">
+                     <label for="city-A">Точка отправление</label>
+                        <select id="city-A" type="text" name="city_a">
+                           {% for city in cities %}
+                              <option value="{{ city.id }}">{{ city.name }}</option>
+                           {% endfor  %}
+                        </select>
+                  </div>
+
+                  <div class="calculate-form-group-field">
+                     <label for="address-A">Адрес</label>
+                     <input id="address-A" type="text" placeholder="Карменова 51а" name="dep_address">
+                  </div>
+               </div>
+
+               <div class="calculate-form-group">
+                  <div class="calculate-form-group-field">
+                     <label for="city-B">Останова</label>
+                     <select id="city-B" type="text" name="city_b">
+                        {% for city in cities %}
+                           <option value="{{ city.id }}">{{ city.name }}</option>
+                        {% endfor  %}
+                     </select>
+                  </div>
+
+                  <div class="calculate-form-group-field">
+                     <label for="address-B">Адрес</label>
+                     <input id="address-B" type="text" placeholder="Карменова 51а" name="arrive_address">
+                  </div>
+               </div>
+
+               <div class="calculate-form-group">
+                  <h4>Товары</h4>
+
+                  <button class="calculate-form-group-button" type="button">
+                     Добавить поле товара
+                  </button>
+               </div>
+
+               <div class="products-group">
+                  <div class="products-group-item">
+                     <div class="product-group-name">
+                        <div class="product-group-name-header">
+                           <label>Название</label>
+                        </div>
+                        <input type="text" name="name">
+                     </div>
+
+                     <div class="pr<QueryDict: {'csrfmiddlewaretoken': ['3MThY50phFe79tu1XpiYAL06pbVFoHmrl3I7NffhVno7rBVjYZoYyFLUe7OMksFS']}>
+                        oduct-group-properties">
+                        <div class="product-group-properties__item">
+                           <label>Вес</label>
+                           <input type="text" name="weight">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Длина</label>
+                           <input type="text" name="length">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Ширина</label>
+                           <input type="text" name="width">
+                        </div>
+                        <div class="product-group-properties__item">
+                           <label>Высота</label>
+                           <input type="text" name="height">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               {% if messages %}
+                  {% for message in messages %}
+                     <p class="form-result-test">
+                        Сумма заказа {{ message }} тенге
+                     </p>
+                  {% endfor %}
+               {% endif %}
+               
+               <button class="form-button">
+                  Подтвердить
+               </button>
+            </div>
+         </form>
+      </div>
+   </section>
+{% endblock %}

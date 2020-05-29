@@ -8,7 +8,7 @@ from apps.trucks.models import Truck
 
 
 
-default_price = DefaultPrice.objects.first()
+
 
 STATUS = [
     (0, ('Не оплачено')),
@@ -22,15 +22,21 @@ class Order(models.Model):
     )
     first_name = models.CharField(
         max_length=100,
-        verbose_name='Имя'
+        verbose_name='Имя',
+        blank=True,
+        null=True
     )
     last_name = models.CharField(
         max_length=100,
-        verbose_name='Фамилия'
+        verbose_name='Фамилия',
+        blank=True,
+        null=True
     )
     middle_name = models.CharField(
         max_length=100,
-        verbose_name='Отчество'
+        verbose_name='Отчество',
+        blank=True,
+        null=True
     )
     email = models.EmailField(
         verbose_name='Почта'
@@ -58,11 +64,14 @@ class Order(models.Model):
         verbose_name='Место прибытия'
     )
     arrival_date = models.DateTimeField(
-        verbose_name='Дата доставки'
+        verbose_name='Дата доставки',
+        null=True,
+        blank=True,
     )
 
     @property
     def price(self):
+        default_price = DefaultPrice.objects.first()
         equipents = [equipent for equipent in self.equipments.all()]
         total = 0
 
@@ -94,11 +103,25 @@ class Order(models.Model):
             raise ValidationError('Квадратный метр оборудовании больше чем 84.5')
 
     def save(self, *args, **kwargs):
-        self.fill_clean()
-        truck = Truck.objects.filter(location=self.departure, remaining_volume__gt=self.get_volume())
+        # truck = Truck.objects.filter(
+        #     location=self.departure, 
+        #     remaining_volume__gt=self.get_volume(),
+        #     status__in=[0,1]
+        # )
 
-        if truck:
-            self.truck = truck
+        # if truck:
+        #     truck = truck.first()
+        #     self.truck = truck
+        #     truck.status = 1
+        #     truck.remaining_volume - self.get_volume()
+            
+        #     # if truck.remaining_volume < 40:
+        #     #     truck.
+        # elif Truck.objects.filter(status=0):
+        #     truck = Truck.objects.get(status=0)
+        #     truck.location = self.departure
+        # else:
+        #     raise ValidationError('На данный момент нету свободных грузовиков.')
         
         return super().save(*args, **kwargs)
 
